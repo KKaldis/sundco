@@ -301,13 +301,13 @@
           onclick="toggleSearch(false)"
         />
       </div>
-      <div id="search-modal" onclick="searchText()">
+      <div id="search-modal" onclick="searchText(true)">
         <div class="search-container">
           <input
             id="search"
             type="text"
             class="search-input"
-            onkeyup="searchText()"
+            onkeyup="searchText(false)"
             placeholder="| Start Typing"
           />
           <div id="fakeInput"></div>
