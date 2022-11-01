@@ -1,4 +1,4 @@
-const searchText = () => {
+const searchText = (click) => {
   const search = document.getElementById("search");
   search.focus();
   const textInput = document.getElementById("fakeInput");
@@ -7,9 +7,14 @@ const searchText = () => {
 
   textInput.innerHTML = search.value;
 
-  if (search.value.length === 0) {
+  if (search.value.length === 0 && click) {
     placeholderText.classList.add("guide-text");
     placeholderText.innerHTML = "(press Q on keyboard)";
+    placeholderText.classList.remove("hide");
+    placeholder.classList.remove("ph-underline");
+  } else if (search.value.length === 0 && !click) {
+    placeholderText.classList.remove("guide-text");
+    placeholderText.innerHTML = "Start Typing";
     placeholderText.classList.remove("hide");
     placeholder.classList.remove("ph-underline");
   } else {
