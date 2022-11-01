@@ -48,6 +48,16 @@ h3 {
   border-radius: 42px;
 }
 
+.btn-lg {
+  width: 336px;
+  height: 84px;
+  font: normal normal 800 32px/39px Montserrat !important;
+}
+
 .btn:hover {
-  background-color: #3e00d4 !important;
+  background-color: #3e00d4;
+}
+
+.overflow-hide {
+  overflow: hidden;
 }
