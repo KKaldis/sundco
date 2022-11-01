@@ -1,7 +1,58 @@
 .map-container {
   display: flex;
 }
+
+.map-container > div {
+  background-color: var(--map-grey);
+  display: flex;
+  width: 100%;
+  padding: 80px 160px;
+  display: flex;
+}
+
+.map-container p {
+  padding-bottom: 60px;
+}
+
 .flex-75 {
   width: 75% !important;
   height: auto;
+}
+
+form div {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 0rem 3rem;
+  text-align: center;
+  justify-content: center;
+}
+
+form span {
+  text-align: start;
+  font: normal normal normal 16px/16px Montserrat;
+}
+
+.select-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-content {
+  gap: 1rem !important;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-content label {
+  inline-size: max-content;
+}
+
+.select-div > div {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  width: fit-content !important;
+  font: normal normal 500 16px/24px Montserrat;
 }

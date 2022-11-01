@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <script defer src="/static/js/slider.js"></script>
+    <script defer src="/static/js/inputs.js"></script>
     <script defer src="/static/js/search.js"></script>
     <script defer src="/static/js/map.js"></script>
     <script
@@ -15,6 +16,7 @@
     <link rel="stylesheet" href="static/styles/hero.css" />
     <link rel="stylesheet" href="static/styles/search.css" />
     <link rel="stylesheet" href="static/styles/map.css" />
+    <link rel="stylesheet" href="static/styles/inputs.css" />
     <link rel="stylesheet" href="static/styles/footer.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -136,6 +138,146 @@
       </div>
       <div class="map-container" id="contact">
         <div class="flex-75" id="map"></div>
+        <div>
+          <form>
+            <h2>Contact Us</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+
+            <div>
+              <div class="did-floating-label-content">
+                <input
+                  class="did-floating-input"
+                  type="text"
+                  placeholder=" "
+                  id="name"
+                  required
+                  onkeyup="checkName(this.value)"
+                />
+                <span id="name-check" class="check"></span>
+                <label class="did-floating-label" id="name-label"
+                  >Full Name *</label
+                >
+              </div>
+              <span class="helper-text" id="name-helper"
+                >This field is required</span
+              >
+            </div>
+
+            <div>
+              <div class="did-floating-label-content">
+                <input
+                  class="did-floating-input"
+                  required
+                  id="email"
+                  type="email"
+                  placeholder=" "
+                  onkeyup="checkEmail(this.value)"
+                  pattern=".+@spitogatos\.gr"
+                />
+                <span id="email-check" class="check"></span>
+                <label class="did-floating-label" id="email-label"
+                  >Email *</label
+                >
+              </div>
+              <span class="helper-text" id="email-helper"
+                >This field is required</span
+              >
+            </div>
+
+            <div>
+              <div class="did-floating-label-content">
+                <input
+                  class="did-floating-input"
+                  id="tel"
+                  type="tel"
+                  onkeyup="checkPhone(this.value)"
+                  required
+                  placeholder=" "
+                  pattern="[0-9]{3}[\s +\. +\-]{1}[0-9]{3}[\s +\. +\-]{1}[0-9]{4}"
+                />
+                <span id="tel-check" class="check"></span>
+                <label class="did-floating-label" id="tel-label">Phone *</label>
+              </div>
+              <span class="helper-text" id="tel-helper"
+                >This field is required</span
+              >
+            </div>
+            <div>
+              <div class="did-floating-label-content">
+                <select
+                  id="category"
+                  class="did-floating-select"
+                  onchange="this.setAttribute('value', this.value); selectCategory(this.value);"
+                  value=""
+                >
+                  <option value=""></option>
+                </select>
+                <label class="did-floating-label">Category</label>
+              </div>
+
+              <div class="did-floating-label-content">
+                <select
+                  id="subcategory"
+                  class="did-floating-select"
+                  onclick="this.setAttribute('value', this.value)"
+                  onchange="this.setAttribute('value', this.value);"
+                  value=""
+                >
+                  <option value=""></option>
+                </select>
+                <label class="did-floating-label">Subcategory</label>
+              </div>
+            </div>
+            <div>
+              <div class="did-floating-label-content">
+                <textarea
+                  onkeyup="checkMessage(this.value)"
+                  class="did-floating-input"
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder=" "
+                ></textarea>
+                <label
+                  class="did-floating-label"
+                  for="message"
+                  id="message-label"
+                  >Message</label
+                >
+              </div>
+              <span id="message-helper" class="helper-text">0</span>
+            </div>
+            <div class="select-div">
+              <span>Please select at least one of the following:</span>
+              <div>
+                <div class="checkbox-content">
+                  <input
+                    type="checkbox"
+                    onchange="setCheckbox(this)"
+                    id="option0"
+                    name="option0"
+                  />
+                  <label for="option0">Option 1</label>
+                </div>
+
+                <div class="checkbox-content">
+                  <input
+                    type="checkbox"
+                    onchange="setCheckbox(this)"
+                    id="option1"
+                    name="option1"
+                  />
+                  <label for="option1">Option 2</label>
+                </div>
+              </div>
+            </div>
+            <div>
+              <input type="submit" class="btn" />
+            </div>
+          </form>
         </div>
       </div>
     </main>
