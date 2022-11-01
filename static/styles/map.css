@@ -1,0 +1,7 @@
+.map-container {
+  display: flex;
+}
+.flex-75 {
+  width: 75% !important;
+  height: auto;
+}

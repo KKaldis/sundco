@@ -4,6 +4,11 @@
     <meta charset="utf-8" />
     <script defer src="/static/js/slider.js"></script>
     <script defer src="/static/js/search.js"></script>
+    <script defer src="/static/js/map.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwY7cUp4GcpE-hSXNeZMsM3Lr-XKUnS7w&callback=initMap&v=weekly"
+      defer
+    ></script>
     <link rel="stylesheet" href="static/styles/global.css" />
     <link rel="stylesheet" href="static/styles/navbar.css" />
     <link rel="stylesheet" href="static/styles/main.css" />
@@ -127,6 +132,10 @@
           <div class="container-50">
             <img src="/static/assets/pillow.png" class="pillow" />
           </div>
+        </div>
+      </div>
+      <div class="map-container" id="contact">
+        <div class="flex-75" id="map"></div>
         </div>
       </div>
     </main>
