@@ -5,10 +5,20 @@
   --purple: #4b00ff;
   --black: #000000;
   --white: #ffffff;
+  --red: #ff1a00;
+}
+
+html {
+  user-select: none;
+  scroll-behavior: smooth;
 }
 
 body {
+  height: 100vh;
+  padding: 0px;
   margin: 0px;
+  position: relative;
+  width: 100%;
 }
 
 p {
@@ -37,7 +47,7 @@ h3 {
   transition: all ease-out 0.3s;
   margin-top: 48px;
   height: 56px;
-  /* min-width: 240px; */
+  min-width: 240px;
   width: 50%;
   border: none;
   font: normal normal 800 18px/22px Montserrat;
