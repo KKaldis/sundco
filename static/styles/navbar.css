@@ -26,6 +26,7 @@ nav .search-icon {
   width: 24px;
   height: 24px;
   padding-left: 2rem;
+  cursor: pointer;
 }
 
 nav ul {

@@ -2,10 +2,12 @@
 <html>
   <head>
     <script defer src="/static/js/slider.js"></script>
+    <script defer src="/static/js/search.js"></script>
     <link rel="stylesheet" href="static/styles/global.css" />
     <link rel="stylesheet" href="static/styles/navbar.css" />
     <link rel="stylesheet" href="static/styles/main.css" />
     <link rel="stylesheet" href="static/styles/hero.css" />
+    <link rel="stylesheet" href="static/styles/search.css" />
     <link rel="stylesheet" href="static/styles/map.css" />
     <link rel="stylesheet" href="static/styles/footer.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,7 +37,11 @@
           <div class="active-lang"><a href="#">EN</a></div>
           <div>|</div>
           <div><a href="#">GR</a></div>
-          <img src="static/assets/search-icon.svg" class="search-icon" />
+          <img
+            src="static/assets/search-icon.svg"
+            class="search-icon"
+            onclick="toggleSearch(true)"
+          />
         </div>
       </div>
     </nav>
@@ -113,7 +119,7 @@
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
               <div>
-                <button class="btn">Search</button>
+                <button class="btn" onclick="toggleSearch(true)">Search</button>
               </div>
             </div>
           </div>
@@ -134,5 +140,31 @@
         <img src="static/assets/logo.svg" class="logo" />
       </a>
     </footer>
+
+    <modal id="modal">
+      <div class="top-bar">
+        <img
+          src="static/assets/close.svg"
+          class="search-icon"
+          onclick="toggleSearch(false)"
+        />
+      </div>
+      <div id="search-modal" onclick="searchText()">
+        <div class="search-container">
+          <input
+            id="search"
+            type="text"
+            class="search-input"
+            onkeyup="searchText()"
+            placeholder="| Start Typing"
+          />
+          <div id="fakeInput"></div>
+          <div id="placeholder">|&nbsp;&nbsp;</div>
+          <span id="placeholder-text">Start Typing</span>
+        </div>
+
+        <button class="btn btn-lg">Search</button>
+      </div>
+    </modal>
   </body>
 </html>
