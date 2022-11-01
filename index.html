@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
     <script defer src="/static/js/slider.js"></script>
     <script defer src="/static/js/search.js"></script>
     <link rel="stylesheet" href="static/styles/global.css" />
@@ -19,18 +20,18 @@
     <title>S.und co</title>
   </head>
 
-  <body>
+  <body id="body">
     <nav>
       <div>
-        <img src="static/assets/logo.svg" class="logo" />
+        <img src="static/assets/logo.svg" class="logo" href="#" />
       </div>
       <ul>
-        <li><a href="#">Main One</a></li>
-        <li><a href="#">Page Two</a></li>
-        <li><a href="#">Page Three</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Our Work</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a onclick="currentSlide(1)">Main One</a></li>
+        <li><a onclick="currentSlide(2)">Page Two</a></li>
+        <li><a onclick="currentSlide(3)">Page Three</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#work">Our Work</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
       <div>
         <div class="lang-bar">
@@ -91,7 +92,7 @@
 
     <main>
       <div class="container">
-        <div class="container-layout">
+        <div class="container-layout" id="about">
           <div class="container-50 girl"></div>
           <div class="container-50">
             <div class="container-text-box">
@@ -109,7 +110,7 @@
             </div>
           </div>
         </div>
-        <div class="container-layout">
+        <div class="container-layout" id="work">
           <div class="container-50">
             <div class="container-text-box">
               <h3>Since the 1500s</h3>
