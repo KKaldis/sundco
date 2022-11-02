@@ -68,6 +68,11 @@ h3 {
   background-color: #3e00d4;
 }
 
+.btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .overflow-hide {
   overflow: hidden;
 }
