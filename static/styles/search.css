@@ -34,6 +34,8 @@
   outline: none;
   caret-color: transparent;
   vertical-align: text-top;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 #placeholder {

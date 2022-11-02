@@ -258,6 +258,7 @@
                     type="checkbox"
                     onchange="setCheckbox(this)"
                     id="option0"
+                    value="0"
                     name="option0"
                   />
                   <label for="option0">Option 1</label>
@@ -268,14 +269,18 @@
                     type="checkbox"
                     onchange="setCheckbox(this)"
                     id="option1"
+                    value="1"
                     name="option1"
                   />
                   <label for="option1">Option 2</label>
                 </div>
               </div>
+              <span class="helper-text helper-checkbox" id="checkbox-helper"
+              >This field is required</span
+            >
             </div>
             <div>
-              <input type="submit" class="btn" />
+              <input type="submit" class="btn" disabled id="submitButton"/>
             </div>
           </form>
         </div>

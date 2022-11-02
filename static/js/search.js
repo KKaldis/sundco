@@ -4,8 +4,8 @@ const searchText = (click) => {
   const textInput = document.getElementById("fakeInput");
   const placeholder = document.getElementById("placeholder");
   const placeholderText = document.getElementById("placeholder-text");
-
   textInput.innerHTML = search.value;
+  textInput.scrollLeft += 200;
 
   if (search.value.length === 0 && click) {
     placeholderText.classList.add("guide-text");
