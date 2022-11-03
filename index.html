@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <script defer src="/static/js/slider.js"></script>
     <script defer src="/static/js/inputs.js"></script>
+    <script defer src="/static/js/fetch.js"></script>
     <script defer src="/static/js/search.js"></script>
     <script defer src="/static/js/map.js"></script>
     <script
@@ -208,9 +209,9 @@
             <div>
               <div class="did-floating-label-content">
                 <select
-                  id="category"
+                  id="categoryId"
                   class="did-floating-select"
-                  onchange="this.setAttribute('value', this.value); selectCategory(this.value);"
+                  onchange="select(this);"
                   value=""
                 >
                   <option value=""></option>
@@ -220,10 +221,9 @@
 
               <div class="did-floating-label-content">
                 <select
-                  id="subcategory"
+                  id="subCategoryId"
                   class="did-floating-select"
-                  onclick="this.setAttribute('value', this.value)"
-                  onchange="this.setAttribute('value', this.value);"
+                  onchange="select(this);"
                   value=""
                 >
                   <option value=""></option>
@@ -280,7 +280,15 @@
               >
             </div>
             <div>
-              <input type="submit" class="btn" disabled id="submitButton" />
+              <button
+                type="submit"
+                class="btn"
+                disabled
+                onclick="submit(this);"
+                id="submitButton"
+              >
+                Submit
+              </button>
             </div>
           </form>
         </div>
