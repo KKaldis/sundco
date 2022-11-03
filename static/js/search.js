@@ -4,9 +4,11 @@ const searchText = (click) => {
   const textInput = document.getElementById("fakeInput");
   const placeholder = document.getElementById("placeholder");
   const placeholderText = document.getElementById("placeholder-text");
+  const scroll = document.getElementById("search-container")
   textInput.innerHTML = search.value;
-  textInput.scrollLeft += 200;
-
+  scroll.scroll({
+    top: scroll.scrollHeight
+  });
   if (search.value.length === 0 && click) {
     placeholderText.classList.add("guide-text");
     placeholderText.innerHTML = "(press Q on keyboard)";

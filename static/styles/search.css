@@ -5,11 +5,14 @@
   height: 100%;
   padding: 0px 12rem;
   gap: 8rem;
+  overflow: hiddenasd asd a;
 }
 
-.search-container {
+#search-container {
+  max-height: 480px;
+  overflow: auto;
   position: relative;
-  display: flex;
+  font: normal normal 800 100px/240px Montserrat;
 }
 
 .search-input,
@@ -22,40 +25,25 @@
 }
 
 #fakeInput {
-  width: fit-content;
-  font: normal normal 800 100px/240px Montserrat;
-  text-decoration-color: var(--fancy-green);
-  -moz-text-decoration-color: var(--fancy-green);
+  display: inline;
+  text-decoration-color: var(--fancy-green) !important;
+  -moz-text-decoration-color: var(--fancy-green) !important;
   text-decoration-line: underline;
   -moz-text-decoration-line: underline;
   text-underline-offset: 30px;
   text-decoration-thickness: 20px;
-  border: none;
-  outline: none;
   caret-color: transparent;
-  vertical-align: text-top;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 #placeholder {
-  height: 100%;
-  min-height: 240px;
-  min-width: 100px;
   width: fit-content;
-  font: normal normal 800 100px/240px Montserrat;
-  text-decoration-color: var(--fancy-green);
-  -moz-text-decoration-color: var(--fancy-green);
+  text-decoration-color: var(--fancy-green) !important;
+  -moz-text-decoration-color: var(--fancy-green) !important;
   text-decoration-line: underline;
   -moz-text-decoration-line: underline;
   text-underline-offset: 30px;
   text-decoration-thickness: 20px;
-  border: none;
-  outline: none;
-  caret-color: transparent;
-  vertical-align: text-top;
   padding-left: 2rem;
-  user-select: none;
 }
 
 #placeholder-text {
@@ -63,6 +51,7 @@
   font: normal normal 800 100px/240px Montserrat;
   position: absolute;
   left: 6rem;
+  white-space: nowrap;
 }
 
 .ph-underline {
@@ -94,7 +83,8 @@
   font: italic normal normal 18px/20px Montserrat !important;
   position: relative !important;
   align-items: center;
-  display: flex;
+  left: 0px !important;
+  bottom: 1rem;
 }
 
 modal {
