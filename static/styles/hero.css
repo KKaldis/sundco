@@ -4,10 +4,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  padding: 0rem 14rem;
 }
 
 .hero1 {
@@ -25,7 +24,6 @@
   text-align: left;
   font: normal normal 800 30px/40px Montserrat;
   color: var(--white);
-  width: var(--layout-width);
 }
 .hero-container h1 {
   font: normal normal 800 100px/122px Montserrat;
