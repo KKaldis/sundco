@@ -7,6 +7,7 @@
   display: flex;
   width: 100%;
   padding: 80px 160px;
+
   display: flex;
 }
 
@@ -17,6 +18,10 @@
 .flex-75 {
   width: 75% !important;
   height: auto;
+}
+
+form{
+
 }
 
 form div {
@@ -55,4 +60,41 @@ form span {
   flex-direction: row;
   width: fit-content !important;
   font: normal normal 500 16px/24px Montserrat;
+}
+
+@media screen and (max-width: 900px) {
+  .map-container {
+    flex-direction: column-reverse;
+  }
+  .map-container > div {
+    padding: 0px;
+  }
+
+  form {
+    padding: 40px 30px !important;
+  }
+
+  .flex-75 {
+    width: 100% !important;
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+
+  .map-container > div {
+    padding: 0px;
+  }
+
+  form {
+    padding: 60px 80px;
+  }
+
+  form > div:nth-child(6) {
+    flex-direction: column !important;
+  }
+
+  .flex-75 {
+    width: 100% !important;
+  }
 }

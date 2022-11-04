@@ -35,3 +35,17 @@ footer .logo {
   height: 28px;
   width: auto;
 }
+
+@media screen and (max-width: 520px) {
+  footer {
+    padding: 0rem 2rem;
+  }
+  footer div {
+    display: none;
+  }
+
+  footer span {
+    font: normal normal medium 12px/15px Montserrat !important;
+    white-space: pre;
+  }
+}

@@ -113,3 +113,26 @@ modal {
     opacity: 0;
   }
 }
+
+@media screen and (max-width: 520px) {
+  #search-container {
+    font: normal normal 800 28px/60px Montserrat !important;
+  }
+
+  #search-modal {
+    padding: 0px 2rem;
+  }
+
+  #fakeInput {
+    text-underline-offset: 12px;
+    text-decoration-thickness: 8px;
+  }
+
+  #placeholder {
+    padding-left: 0rem;
+  }
+
+  .top-bar {
+    padding-right: 2rem;
+  }
+}
