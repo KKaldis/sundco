@@ -26,17 +26,17 @@ const searchText = (click) => {
   }
 };
 
-const toggleSearch = (show) => {
-  const modal = document.getElementById('modal');
+const toggleModal = (show, id) => {
+  const modal = document.getElementById(id);
   const body = document.getElementById('body')
 
   if (show) {
-    modal.classList.add('modal-show')
     body.classList.add('overflow-hide')
+    modal.classList.add(`modal-show`)
 
   }
   else {
-    modal.classList.remove('modal-show');
-    body.classList.remove('overflow-hide')
+    body.classList.remove('overflow-hide');
+    modal.classList.remove(`modal-show`);
   }
 }

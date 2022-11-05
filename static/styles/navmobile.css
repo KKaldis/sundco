@@ -1,0 +1,111 @@
+.mobile-nav {
+  height: 56px;
+  width: 100%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font: normal normal 800 38px/68px Montserrat;
+  letter-spacing: 0px;
+  color: #ffffff;
+  display: none;
+  text-align: center;
+  position: fixed;
+  top: 0px;
+  z-index: 3;
+}
+
+.mobile-nav-header {
+  background: black;
+  font: normal normal 800 38px/68px Montserrat;
+  color: #ffffff;
+  text-align: center;
+  position: sticky;
+  top: 0px;
+}
+
+.mobile-logo {
+  aspect-ratio: 1 / 1;
+  height: 40px;
+  padding-left: 2rem;
+}
+
+.mobile-nav-controls {
+  display: flex;
+  align-items: center;
+  padding-right: 2rem;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 1080px) {
+  .mobile-nav {
+    display: flex;
+  }
+}
+
+/*  */
+
+#mobile-menu {
+  height: 100vh;
+  position: fixed;
+  z-index: 5;
+  bottom: 100%;
+  width: 100%;
+  transition: 0.3 all ease-out;
+  overflow: scroll;
+}
+
+.mobile-menu-show {
+  bottom: 0 !important;
+}
+
+#mobile-menu > ul {
+  padding: 0px;
+  list-style: none;
+  text-align: center;
+  font: normal normal 800 38px/68px Montserrat;
+}
+
+.mobile-menu-langbar {
+  font: normal normal bold 18px/22px Montserrat;
+  color: #cfcfcf;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.mobile-menu-langbar > .active-lang a {
+  color: black !important;
+}
+
+.mobile-menu-footer {
+  background: #4b00ff;
+  padding: 2rem 2rem 0.5rem 2rem;
+  gap: 2rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-menu-social {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font: normal normal 800 18px/22px Montserrat;
+  width: 200px;
+}
+
+hr {
+  border: solid white 1px;
+  width: 100%;
+}
+
+.mobile-menu-text {
+  align-self: self-start;
+  color: white;
+  font: normal normal 400 14px/18px Montserrat;
+  display: flex;
+  flex-direction: column;
+}

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="static/styles/search.css" />
     <link rel="stylesheet" href="static/styles/map.css" />
     <link rel="stylesheet" href="static/styles/inputs.css" />
+    <link rel="stylesheet" href="static/styles/navmobile.css" />
     <link rel="stylesheet" href="static/styles/footer.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,6 +30,7 @@
   </head>
 
   <body id="body">
+    <!-- desktop navigation -->
     <nav>
       <div>
         <img src="static/assets/logo.svg" class="logo" href="#" />
@@ -49,11 +51,32 @@
           <img
             src="static/assets/search-icon.svg"
             class="search-icon"
-            onclick="toggleSearch(true)"
+            onclick="toggleModal(true, 'modal')"
           />
         </div>
       </div>
     </nav>
+
+    <!-- mobile navigation -->
+    <div class="mobile-nav">
+      <img src="static/assets/logo.svg" class="mobile-logo" href="#" />
+
+      <div class="mobile-nav-controls">
+        <img
+          src="static/assets/search-icon.svg"
+          class="search-icon"
+          onclick="toggleModal(true, 'modal')"
+        />
+
+        <img
+          src="static/assets/burger.svg"
+          class="search-icon"
+          onclick="toggleModal(true, 'mobile-menu')"
+        />
+      </div>
+    </div>
+
+    <!-- hero slider -->
     <div class="slideshow-container">
       <div class="mySlides fade">
         <div class="hero-image hero1">
@@ -97,9 +120,10 @@
         <span class="dot" onclick="currentSlide(3)"></span>
       </div>
     </div>
-
+    <!-- main content section -->
     <main>
       <div class="container">
+        <!-- girl section -->
         <div class="container-layout" id="about">
           <div class="container-50 girl"></div>
           <div class="container-50">
@@ -118,6 +142,7 @@
             </div>
           </div>
         </div>
+        <!-- pillow section -->
         <div class="container-layout" id="work">
           <div class="container-50">
             <div class="container-text-box">
@@ -128,7 +153,9 @@
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
               <div>
-                <button class="btn" onclick="toggleSearch(true)">Search</button>
+                <button class="btn" onclick="toggleModal(true, 'modal')">
+                  Search
+                </button>
               </div>
             </div>
           </div>
@@ -137,8 +164,11 @@
           </div>
         </div>
       </div>
+      <!-- map section -->
       <div class="map-container" id="contact">
+        <!-- map -->
         <div class="flex-75" id="map"></div>
+        <!-- form -->
         <div>
           <form>
             <h2>Contact Us</h2>
@@ -294,6 +324,8 @@
         </div>
       </div>
     </main>
+
+    <!-- footer -->
     <footer>
       <span>© The standard Copywrite 2020</span>
       <div>
@@ -306,12 +338,13 @@
       </a>
     </footer>
 
+    <!-- search modal -->
     <modal id="modal">
       <div class="top-bar">
         <img
           src="static/assets/close.svg"
           class="search-icon"
-          onclick="toggleSearch(false)"
+          onclick="toggleModal(false, 'modal')"
         />
       </div>
       <div id="search-modal" onclick="searchText(true)">
@@ -330,6 +363,61 @@
         </div>
 
         <button class="btn btn-lg">Search</button>
+      </div>
+    </modal>
+
+    <!-- mobile menu -->
+    <modal id="mobile-menu">
+      <div class="mobile-nav-header">
+        MENU
+
+        <div class="top-bar">
+          <img
+            style="color: white"
+            src="static/assets/closewhite.svg"
+            class="search-icon"
+            onclick="toggleModal(false, 'mobile-menu')"
+          />
+        </div>
+      </div>
+
+      <ul>
+        <li>Main Page</li>
+        <li>Page Two</li>
+        <li>Page Three</li>
+        <li>About Us</li>
+        <li>Our Work</li>
+        <li>Contact</li>
+      </ul>
+      <div class="mobile-menu-langbar">
+        <div class="active-lang"><a href="#">EN</a></div>
+        <div>|</div>
+        <div><a href="#">GR</a></div>
+      </div>
+
+      <div class="mobile-menu-footer">
+        <div class="mobile-menu-social">
+          <img src="static/assets/facebook.svg" />
+          <img src="static/assets/twitter.svg" />
+          <img src="static/assets/instagram.svg" />
+          <img src="static/assets/globe.svg" />
+        </div>
+
+        <div class="mobile-menu-social">
+          <div>Cookies.</div>
+          <div>|</div>
+          <div>Privacy.</div>
+        </div>
+        <hr />
+
+        <div class="mobile-menu-text">
+          <a href="mailto:S.und@themail.com">S.und@themail.com</a>
+          <a href="tel:+302101234567">+30 210 1234 567</a>
+        </div>
+
+        <div class="mobile-menu-text">
+          <div>© The standard Copywrite 2020</div>
+        </div>
       </div>
     </modal>
   </body>

@@ -9,6 +9,10 @@
   --tablet-bp: 922px;
 }
 
+a {
+  text-decoration: none;
+}
+
 html {
   user-select: none;
   scroll-behavior: smooth;
@@ -86,4 +90,20 @@ h3 {
   .btn-lg {
     width: 100%;
   }
+}
+
+modal {
+  position: fixed;
+  z-index: 4;
+  top: -100vh;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  transition: top 0.3s ease-out;
+  overflow: auto;
+}
+
+.modal-show {
+  top: 0;
 }

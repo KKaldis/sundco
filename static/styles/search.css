@@ -5,7 +5,7 @@
   height: 100%;
   padding: 0px 12rem;
   gap: 8rem;
-  overflow: hiddenasd asd a;
+  overflow: hidden;
 }
 
 #search-container {
@@ -87,20 +87,6 @@
   bottom: 1rem;
 }
 
-modal {
-  position: fixed;
-  z-index: 4;
-  top: -100vh;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: white;
-  transition: all 0.3s ease-out;
-}
-
-.modal-show {
-  top: 0;
-}
 
 @keyframes blink {
   0% {
@@ -116,7 +102,9 @@ modal {
 
 @media screen and (max-width: 520px) {
   #search-container {
-    font: normal normal 800 28px/60px Montserrat !important;
+    font: normal normal 800 28px/146px Montserrat !important;
+    display: flex;
+    align-items: center;
   }
 
   #search-modal {
@@ -130,9 +118,22 @@ modal {
 
   #placeholder {
     padding-left: 0rem;
+    text-underline-offset: 22px;
+    text-decoration-thickness: 8px;
   }
 
   .top-bar {
     padding-right: 2rem;
+  }
+
+  #placeholder-text {
+    font: normal normal 800 24px/36px Montserrat;
+    position: absolute;
+    left: 3rem;
+    white-space: nowrap;
+  }
+
+  .guide-text {
+    bottom: 0px;
   }
 }
