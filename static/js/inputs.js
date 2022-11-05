@@ -140,7 +140,7 @@ const inputNormal = (id, msg = "This field is required") => {
 }
 
 //! validation check
-var validateStates = [false, false, false, false, false]
+var validateStates = [false, false, false, false, true]
 const validate = (index, state) => {
   validateStates[index] = state
   isValid = validateStates.every(inputValidation => inputValidation === true)
