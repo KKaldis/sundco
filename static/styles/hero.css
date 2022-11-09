@@ -10,14 +10,14 @@
 }
 
 .hero1 {
-  background-image: url("/static/assets/hero-back1.png");
+  background-image: url("../assets/hero-back1.png");
 }
 
 .hero2 {
-  background-image: url("/static/assets/hero-back2.jpg");
+  background-image: url("../assets/hero-back2.jpg");
 }
 .hero3 {
-  background-image: url("/static/assets/hero-back3.webp");
+  background-image: url("../assets/hero-back3.webp");
 }
 
 .hero-container {

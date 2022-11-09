@@ -150,7 +150,7 @@ input {
     } */
 
 .check-ok {
-  background: url(/static/assets/check.svg) no-repeat !important;
+  background: url(../assets/check.svg) no-repeat !important;
 }
 
 .check {

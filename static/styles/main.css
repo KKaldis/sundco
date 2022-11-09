@@ -42,7 +42,7 @@
   transition: 0.3s all ease-in-out;
   background-repeat: no-repeat;
   background-origin: content-box;
-  background-image: url("/static/assets/photogirl.png");
+  background-image: url("../assets/photogirl.png");
   height: 368px;
   background-position: center top;
 }
